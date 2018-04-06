@@ -11,7 +11,7 @@ defmodule BankStatementClassifier.Classifier do
   @moduledoc """
   Classifies bank statement items.
   """
-  @matchers [{~r/alnatura\s+produktion/i, :un}]
+  @matchers [{~r/alnatura\s+produktion/i, :un}, {~r/^edeka/i, :un}, {~r/^aldi/i, :un}]
 
   def classify_item(item) do
     @matchers
